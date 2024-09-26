@@ -1,0 +1,88 @@
+# --------- Keyboard Shortucts ------------
+
+# spaces switch binds
+# alt - 1 : skhd --key "ctrl - 1"
+# alt - 2 : skhd --key "ctrl - 2"
+# alt - 3 : skhd --key "ctrl - 3"
+# alt - 4 : skhd --key "ctrl - 4"
+# alt - 5 : skhd --key "ctrl - 5"
+# alt - 6 : skhd --key "ctrl - 6"
+# alt - 7 : skhd --key "ctrl - 7"
+
+# switch to prev-next space
+# alt - p : yabai -m space --focus next
+# alt - i : yabai -m space --focus prev
+
+# change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+# Move window focus within space
+alt - h : yabai -m window --focus west || yabai -m display --focus west
+alt - l : yabai -m window --focus east || yabai -m display --focus east
+
+#change focus between external displays (left and right)
+alt - s: yabai -m display --focus west
+alt - g: yabai -m display --focus east
+
+# Application binds
+alt - q : open -na /Applications/Alacritty.app
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - v : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# toggle split direction
+shift + alt - t : yabai -m space --toggle split
+
+# toggle window to be sticky
+shift + alt - s : yabai -m window --toggle sticky
+
+# maximize a window
+shift + alt - f : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --grid 0:0:0:0:0:0
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - z : yabai -m space --balance
+
+# swap windows
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+# Swap windows
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+
+# Swap windows or move to next display, but only change display focus if the window moves to another display
+shift + alt - h : yabai -m window --swap west || (yabai -m window --display west && yabai -m display --focus west)
+shift + alt - l : yabai -m window --swap east || (yabai -m window --display east && yabai -m display --focus east)
+
+# move window and split
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - l : yabai -m window --warp east
+
+#move window to prev and next space
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
+
+# move window to space #
+shift + alt - 1 : yabai -m window --space 1;
+shift + alt - 2 : yabai -m window --space 2;
+shift + alt - 3 : yabai -m window --space 3;
+shift + alt - 4 : yabai -m window --space 4;
+shift + alt - 5 : yabai -m window --space 5;
+shift + alt - 6 : yabai -m window --space 6;
+shift + alt - 7 : yabai -m window --space 7;
+
+# stop/start/restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
